@@ -182,4 +182,5 @@ get '/db' do
 
   Songkick::OAuth2::Model::Schema.up
 
+  "done"
 end  
