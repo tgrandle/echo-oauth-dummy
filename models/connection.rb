@@ -7,11 +7,4 @@ require 'fileutils'
 #   :adapter  => 'sqlite3',
 #   :database => dbfile)
 
- ActiveRecord::Base.establish_connection(
-   :adapter  => 'postgresql',
-   :host     => 'localhost',
-   :username => 'user',
-   # :password => db.password,
-   :database => 'app-dev',
-   :encoding => 'utf8'
- )
+ ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
