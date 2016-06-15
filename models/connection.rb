@@ -8,10 +8,10 @@ require 'fileutils'
 #   :database => dbfile)
 
  ActiveRecord::Base.establish_connection(
-   :adapter  => 'postgresql'
-   :host     => 'localhost'
-   :username => 'user'
+   :adapter  => 'postgresql',
+   :host     => 'localhost',
+   :username => 'user',
    # :password => db.password,
-   :database => 'app-dev'
+   :database => 'app-dev',
    :encoding => 'utf8'
  )
