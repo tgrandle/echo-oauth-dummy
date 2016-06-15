@@ -8,4 +8,4 @@ end
 
 gem 'sinatra', '>= 1.3.0'
 gem 'songkick-oauth2-provider'
-gem 'sqlite3'
+gem 'pg'
