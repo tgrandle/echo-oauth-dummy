@@ -66,6 +66,10 @@ end
     @user = User.find_by_id(session[:user_id])
     @oauth2 = Songkick::OAuth2::Provider.parse(@user, env)
 
+    state = params[:state]
+    session[:state] = state
+    puts "using session cookie to store state: #{state}"
+
     if @oauth2.redirect?
       redirect @oauth2.redirect_uri, @oauth2.response_status
     end
